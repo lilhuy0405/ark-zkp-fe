@@ -4,7 +4,7 @@ import init, { generate_zkp_proof_only } from "./pkg-web/zkp_rust_client";
 
 function ZKProofTest() {
   const [isInitialized, setIsInitialized] = useState(false);
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [start, setStart] = useState(100);
   const [increments, setIncrements] = useState(120);
@@ -48,7 +48,7 @@ function ZKProofTest() {
       });
 
       console.log("🎉 Proof result:", proofResult);
-    } catch (error) {
+    } catch (error: any) {
       console.error("❌ Proof generation failed:", error);
       setResult({ error: error.message });
     }
