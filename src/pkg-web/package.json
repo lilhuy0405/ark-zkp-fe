@@ -1,0 +1,15 @@
+{
+  "name": "zkp-rust-client",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "zkp_rust_client_bg.wasm",
+    "zkp_rust_client.js",
+    "zkp_rust_client.d.ts"
+  ],
+  "main": "zkp_rust_client.js",
+  "types": "zkp_rust_client.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
