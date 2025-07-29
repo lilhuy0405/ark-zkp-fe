@@ -63,29 +63,33 @@ function ZKProofTest() {
     <div style={{ padding: "20px" }}>
       <h2>🚀 ZK Proof Test</h2>
       <div>
-        
+        <p>
+          Use the wasm build from the{" "}
+          <a href="https://github.com/lilhuy0405/ark-zkp">ark-zkp</a> repo.
+          which use rust with arkworks to generate the proof.
+        </p>
+      </div>
+      <div>
         <input
           type="number"
           value={start}
           onChange={(e) => setStart(+e.target.value)}
         />
-            + <input
+        +{" "}
+        <input
           type="number"
           value={increments}
           onChange={(e) => setIncrements(+e.target.value)}
         />
         =
-
-      <button
-        onClick={generateProof}
-        disabled={loading}
-        style={{ padding: "10px 20px", fontSize: "16px" }}
-      >
-        {loading ? "Generating..." : "Generate ZK Proof"}
-      </button>
+        <button
+          onClick={generateProof}
+          disabled={loading}
+          style={{ padding: "10px 20px", fontSize: "16px" }}
+        >
+          {loading ? "Generating..." : "Generate ZK Proof"}
+        </button>
       </div>
-  
-
 
       {result && (
         <div
@@ -96,9 +100,7 @@ function ZKProofTest() {
           <p>See console log for more details</p>
         </div>
       )}
-    
     </div>
-  
   );
 }
 
